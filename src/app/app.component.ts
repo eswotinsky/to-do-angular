@@ -17,7 +17,7 @@ export class AppComponent {
     new Task('Here is yet another task', 2),
     new Task('Let\'s test some more', 2)
   ];
-  selectedTask: Task = this.tasks[0];
+  selectedTask = null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
@@ -30,5 +30,8 @@ export class AppComponent {
     else {
       return "bg-info";
     }
+  }
+  finishedEditing(){
+    this.selectedTask = null;
   }
 }
