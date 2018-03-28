@@ -17,8 +17,9 @@ export class AppComponent {
     new Task('Here is yet another task', 2),
     new Task('Let\'s test some more', 2)
   ];
-  editTask() {
-    alert("Time to edit a task!");
+  selectedTask: Task = this.tasks[0];
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
   priorityColor(currentTask){
     if (currentTask.priority === 3){
