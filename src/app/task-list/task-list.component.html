@@ -1,4 +1,4 @@
 <ul>
   <!-- editTask() not currently accessible; located in AppComponent -->
-  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask(currentTask)">Edit!</button></li>
+  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of childTaskList">{{currentTask.description}} <button (click)="editTask(currentTask)">Edit!</button></li>
 </ul>

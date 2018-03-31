@@ -12,6 +12,17 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
+  selectedTask = null;
+
+  masterTaskList: Task[] = [
+    new Task('Finish weekend Angular homework for Epicodus course', 3),
+    new Task('Here is yet another task', 2),
+    new Task('Let\'s test some more', 2)
+  ];
+
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
+  }
 
   finishedEditing(){
     this.selectedTask = null;
