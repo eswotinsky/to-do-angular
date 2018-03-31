@@ -7,7 +7,7 @@
   <h2>Welcome, {{userName}}!</h2>
 </div>
 <h3>{{currentFocus}}</h3>
-<app-task-list [childTaskList]="masterTaskList"></app-task-list>
+<app-task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></app-task-list>
 <hr>
 
 <div *ngIf="selectedTask">
