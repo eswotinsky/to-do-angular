@@ -20,6 +20,10 @@ export class AppComponent {
     new Task('Let\'s test some more', 2)
   ];
 
+  addTask(newTask: Task) {
+    this.masterTaskList.push(newTask);
+  }
+
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
