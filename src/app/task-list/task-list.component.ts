@@ -31,4 +31,8 @@ export class TaskListComponent {
     }
   }
 
+  toggleDone(clickedTask: Task, setCompleteness: boolean) {
+    clickedTask.done = setCompleteness;
+  }
+
 }

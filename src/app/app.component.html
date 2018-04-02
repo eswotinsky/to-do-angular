@@ -1,12 +1,12 @@
 <div style="text-align:center">
   <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
+  <h3>{{currentFocus}}</h3>
+  <h2>Welcome, {{userName}}!</h2>
   <form>
     <label for="name">Enter your name: </label>
     <input [(ngModel)]="userName" type="text" name="user">
   </form>
-  <h2>Welcome, {{userName}}!</h2>
 </div>
-<h3>{{currentFocus}}</h3>
 <app-task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></app-task-list>
 <hr>
 
